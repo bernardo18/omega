@@ -12,4 +12,16 @@ describe "user_profile" do
     user.name = nil
     user.should_not be_valid    
   end
+
+  it "validate format of email" do
+    user = FactoryGirl.build(:user)
+    user.email = "josecalsehotmail.com"
+    user.should_not be_valid
+  end
+  
+  it "validate empty email" do
+    user = FactoryGirl.build(:user)
+    user.email = nil
+    user.should_not be_valid 
+  end
 end
