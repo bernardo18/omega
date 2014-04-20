@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Gravtastic
+  gravtastic
   validates :name, presence: true
   EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/ii
   validates :email, presence: true
