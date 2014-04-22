@@ -3,11 +3,11 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= current_user.name %>
-      </h1>
-      <h2>
-	<%= current_user.email %>
-      </h2>
+        <%= image_tag current_user.gravatar_url(:size => 100) %>
+        <%= current_user.name.capitalize %>
+      <p></p>
+        <%= current_user.email%>
+      </h1> 
     </section>
-  </aside>
+  </aside> 
 </div>
