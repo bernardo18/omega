@@ -1,13 +1,50 @@
 <% provide(:title, current_user.name) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="span9">
     <section>
-      <h1>
+      <div class="form-group">
         <%= image_tag current_user.gravatar_url(:size => 100) %>
-        <%= current_user.name.capitalize %>
-      <p></p>
-        <%= current_user.email%>
-      </h1> 
+      </div>
+      <div class="form-group">
+        <h1>
+          Apodo: <%= current_user.name.capitalize %>
+          <p></p>
+          Email: <%= current_user.email%>
+          <p></p>
+          <%= link_to "Editar Usuario", edit_user_registration_path ,
+            class: "btn btn-large btn-primary" %>
+          <%= link_to "Modo Vacaciones", "#" ,
+            class: "btn btn-large btn-primary" %>
+        </h1>
+      </div>  
     </section>
   </aside> 
+</div>
+<div class="navbar navbar-inverse">
+  <nav>
+    <h3>
+    <div class="container">
+      <ul class="nav pull-left">
+        <li id="fat-menu" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Perfil Completo  
+          <b class="caret"></b>
+        </a>
+          <ul class="dropdown-menu">
+            <li>Nombre:                             </li>
+	          <li>Apellido:                           </li>
+            <li>sexo:                               </li>
+            <li>Trabajo:                            </li>
+            <li>Fecha de nacimiento:                </li>
+	        </ul>
+        </li>
+        <li id="fat-menu" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Islas  
+          <b class="caret"></b>
+        </li>
+      </ul>
+    </div>
+    </h3>
+  </nav>
 </div>
