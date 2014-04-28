@@ -20,31 +20,23 @@
     </section>
   </aside> 
 </div>
-<div class="navbar navbar-inverse">
-  <nav>
-    <h3>
-    <div class="container">
-      <ul class="nav pull-left">
-        <li id="fat-menu" class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          Perfil Completo  
-          <b class="caret"></b>
-        </a>
-          <ul class="dropdown-menu">
-            <li>Nombre:                             </li>
-	          <li>Apellido:                           </li>
-            <li>sexo:                               </li>
-            <li>Trabajo:                            </li>
-            <li>Fecha de nacimiento:                </li>
-	        </ul>
-        </li>
-        <li id="fat-menu" class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          Islas  
-          <b class="caret"></b>
-        </li>
-      </ul>
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">Perfil completo</a></li>
+    <li><a href="#tab2" data-toggle="tab">Islas</a></li>
+    <li><a href="#tab3" data-toggle="tab">Alianza</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <p>Datos extras</p>
+      <%= link_to "Editar Datos Extras", "#" ,
+            class: "btn btn-large btn-primary" %>
     </div>
-    </h3>
-  </nav>
+    <div class="tab-pane" id="tab2">
+      <p>Cargado de Islas</p>
+    </div>
+    <div class="tab-pane" id="tab3">
+      <p>Cargado de Alianzas</p>
+    </div>
+  </div>
 </div>
