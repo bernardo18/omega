@@ -1,7 +1,7 @@
 class CreateIslands < ActiveRecord::Migration
   def change
     create_table :islands do |t|
-      t.string :name
+      t.string :name, :default => "isla"
       t.integer :gold
       t.integer :wood
       t.integer :iron

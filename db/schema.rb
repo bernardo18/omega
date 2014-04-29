@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401211953) do
+ActiveRecord::Schema.define(version: 20140429002507) do
+
+  create_table "empty_islands", force: true do |t|
+    t.integer  "pos"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "islands", force: true do |t|
+    t.string   "name",          default: "isla"
+    t.integer  "gold"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "coal"
+    t.integer  "gunpowder"
+    t.string   "constructions"
+    t.integer  "user_id"
+    t.boolean  "base"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
