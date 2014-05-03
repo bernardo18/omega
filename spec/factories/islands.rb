@@ -2,13 +2,13 @@
 
 FactoryGirl.define do
   factory :island do
-    name "MyString"
-    gold 1
-    wood 1
-    iron 1
-    coal 1
-    gunpowder 1
-    constructions "MyString"
+    name "Isla"
+    gold 0
+    wood 0
+    iron 0
+    coal 0
+    gunpowder 0
+    constructions "A0B0C0D0E0F0"
     user_id 1
     base false
   end

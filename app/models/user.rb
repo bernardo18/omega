@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :islands
   include Gravtastic
   gravtastic
   validates :name, presence: true
