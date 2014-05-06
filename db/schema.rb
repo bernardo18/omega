@@ -13,21 +13,25 @@
 
 ActiveRecord::Schema.define(version: 20140429002507) do
 
-  create_table "empty_islands", force: true do |t|
-    t.integer  "pos"
+  create_table "islands", force: true do |t|
+    t.integer  "pos_x"
+    t.integer  "pos_y"
+    t.integer  "cuadrant"
+    t.boolean  "taken"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "islands", force: true do |t|
-    t.string   "name",          default: "isla"
+  create_table "user_island", force: true do |t|
+    t.string   "name",             default: "isla"
     t.integer  "gold"
     t.integer  "wood"
     t.integer  "iron"
     t.integer  "coal"
     t.integer  "gunpowder"
-    t.string   "constructions"
-    t.integer  "user_id"
+    t.integer  "constructions_id"
+    t.integer  "island_id"
     t.boolean  "base"
     t.datetime "created_at"
     t.datetime "updated_at"

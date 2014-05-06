@@ -1,4 +1,2 @@
-class Island < ActiveRecord::Base
-  belongs_to :user
-  validates :user_id, presence: true
+class EmptyIsland < ActiveRecord::Base
 end

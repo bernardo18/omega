@@ -1,14 +1,14 @@
-class CreateIslands < ActiveRecord::Migration
+class CreateUserIslands < ActiveRecord::Migration
   def change
-    create_table :islands do |t|
+    create_table :user_island do |t|
       t.string :name, :default => "isla"
       t.integer :gold
       t.integer :wood
       t.integer :iron
       t.integer :coal
       t.integer :gunpowder
-      t.string :constructions
-      t.integer :user_id
+      t.integer :constructions_id
+      t.integer :island_id
       t.boolean :base
 
       t.timestamps

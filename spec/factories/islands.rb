@@ -2,14 +2,10 @@
 
 FactoryGirl.define do
   factory :island do
-    name "Isla"
-    gold 0
-    wood 0
-    iron 0
-    coal 0
-    gunpowder 0
-    constructions "A0B0C0D0E0F0"
-    user_id 1
-    base false
+    pos_x 0
+    pos_y 0
+    cuadrant 0
+    user_id nil
+    take false
   end
 end
